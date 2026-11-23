@@ -1,0 +1,57 @@
+# ==============================================================================
+# Git Ignore - LaTeX & Build Artifacts
+# ==============================================================================
+
+# Berkas Bantu Kompilasi LaTeX (Auxiliary Files)
+*.aux
+*.bbl
+*.blg
+*.brf
+*.bcf
+*.cb
+*.cb2
+*.cpt
+*.dvi
+*.fdb_latexmk
+*.fls
+*.fmt
+*.fot
+*.gaux
+*.idx
+*.ilg
+*.ind
+*.ini
+*.ist
+*.loa
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.pdfsync
+*.ps
+*.run.xml
+*.snm
+*.soc
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.tdo
+*.toc
+*.upa
+*.upb
+*.vrb
+*.w18
+*.xdv
+
+# Tectonic Cache & Intermediates
+.tectonic/
+build/
+
+# Berkas Sementara Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~

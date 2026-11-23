@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratinjau Proposal Tugas Akhir - Sesuai Template Resmi Telkom University</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 25mm 25mm 25mm 30mm;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #111827;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 30px 15px;
+    }
+    .page-container {
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 35px auto;
+      background: #ffffff;
+      padding: 28mm 25mm 25mm 30mm;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-sizing: border-box;
+      position: relative;
+    }
+    .page-number {
+      position: absolute;
+      bottom: 15mm;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 10pt;
+      color: #374151;
+    }
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .page-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: auto;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Times New Roman', Times, serif;
+      color: #111827;
+      line-height: 1.3;
+    }
+    h1 {
+      font-size: 14pt;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 12.5pt;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 1.5rem;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+    }
+    h3 {
+      font-size: 11pt;
+      font-weight: bold;
+      margin-top: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    h4 {
+      font-size: 11pt;
+      font-weight: bold;
+      margin-top: 1.0rem;
+      margin-bottom: 0.4rem;
+    }
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      text-indent: 1.0cm;
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+    }
+    p.no-indent {
+      text-indent: 0;
+    }
+    ol, ul {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      padding-left: 1.3cm;
+    }
+    li {
+      margin-bottom: 0.35rem;
+      text-align: justify;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      font-size: 9.5pt;
+      line-height: 1.4;
+    }
+    th, td {
+      border-top: 1px solid #111827;
+      border-bottom: 1px solid #111827;
+      padding: 7px 9px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      font-weight: bold;
+      background-color: #f8fafc;
+      border-bottom: 1.5px solid #111827;
+    }
+    .caption {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+    .figure-caption {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .ref-item {
+      padding-left: 0.75cm;
+      text-indent: -0.75cm;
+      margin-bottom: 0.7rem;
+      text-align: justify;
+      font-size: 10.5pt;
+    }
+    .diagram-box {
+      border: 1.5px solid #2563eb;
+      background-color: #eff6ff;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin: 6px auto;
+      max-width: 90%;
+      text-align: center;
+      font-size: 9.5pt;
+    }
+    .diagram-arrow {
+      text-align: center;
+      color: #1d4ed8;
+      font-size: 14pt;
+      line-height: 1;
+      margin: 2px 0;
+    }
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 15px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+    }
+    .btn-print {
+      background: #dc2626;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+    .btn-print:hover {
+      background: #b91c1c;
+    }
+    .photo-box {
+      width: 3.6cm;
+      height: 5.2cm;
+      border: 1.5px solid #111;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+      font-size: 9pt;
+      background-color: #f8fafc;
+    }
+    .toc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5pt;
+    }
+    .toc-table td {
+      border: none;
+      padding: 3px 0;
+    }
+    .toc-dots {
+      border-bottom: 1px dotted #475569;
+      height: 1em;
+      margin: 0 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar no-print">
+    <div>
+      <strong>Template Resmi Telkom University Surabaya</strong> | Proposal Tugas Akhir (1202230021)
+    </div>
+    <button class="btn-print" onclick="window.print()">Cetak / Simpan PDF</button>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 1: SAMPUL (COVER) -->
+  <!-- ========================================================================= -->
+  <div class="page-container">
+    <div style="text-align: center; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <h1 style="font-size: 13.5pt; line-height: 1.4; margin-bottom: 0.3rem;">
+          SISTEM PENCEGAHAN DISKREPANSI MENGGUNAKAN ANALISIS ABC DAN ARSITEKTUR REST API PADA SISTEM POINT OF SALES
+        </h1>
+        <div style="font-size: 11pt; font-weight: bold; font-style: italic; color: #1e293b; margin-bottom: 1.4rem;">
+          (DISCREPANCY PREVENTION SYSTEM USING ABC ANALYSIS AND REST API ARCHITECTURE ON POINT OF SALES SYSTEM)
+        </div>
+        <div style="font-size: 11pt; margin-top: 1.2rem;">
+          Proposal Tugas Akhir<br>
+          Mata Kuliah .................... (diisi Kode Mata Kuliah)
+        </div>
+      </div>
+
+      <div style="margin: 1.5rem 0;">
+        <div style="font-size: 11pt;">Disusun oleh:</div>
+        <div style="font-size: 12pt; font-weight: bold; margin-top: 0.2rem;">MUHAMMAD FEBRIANO ALDO SYAHPUTRA</div>
+        <div style="font-size: 11pt; font-weight: bold;">1202230021</div>
+      </div>
+
+      <div style="margin: 1.5rem 0;">
+        <img src="logo_telkom.png" alt="Logo Telkom University" style="width: 5.8cm; max-width: 80%;">
+      </div>
+
+      <div style="font-weight: bold; font-size: 11.5pt; line-height: 1.4;">
+        PROGRAM STUDI SARJANA TEKNOLOGI INFORMASI<br>
+        DIREKTORAT KAMPUS SURABAYA<br>
+        UNIVERSITAS TELKOM<br>
+        SURABAYA<br>
+        2026
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 2: LEMBAR PENGESAHAN (ii) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2 style="margin-bottom: 0.2rem;">LEMBAR PENGESAHAN</h2>
+      <h2 style="margin-top: 0; margin-bottom: 1.0rem;">PROPOSAL TUGAS AKHIR</h2>
+
+      <div style="font-size: 12pt; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.35;">
+        SISTEM PENCEGAHAN DISKREPANSI MENGGUNAKAN ANALISIS ABC DAN ARSITEKTUR REST API PADA SISTEM POINT OF SALES
+      </div>
+
+      <p class="no-indent" style="text-align: center; margin-bottom: 1.5rem;">
+        Proposal ini diajukan sebagai usulan pembuatan Tugas Akhir<br>
+        pada Program Studi Sarjana Teknologi Informasi<br>
+        Direktorat Kampus Surabaya<br>
+        Universitas Telkom
+      </p>
+
+      <div style="margin-bottom: 1.5rem;">
+        <div>Disusun oleh:</div>
+        <div style="font-weight: bold; margin-top: 0.2rem;">MUHAMMAD FEBRIANO ALDO SYAHPUTRA</div>
+        <div style="font-weight: bold;">1202230021</div>
+      </div>
+
+      <div style="margin-bottom: 1.0rem;">
+        Surabaya, ....................<br>
+        <strong>Menyetujui,</strong>
+      </div>
+
+      <table style="border: none; width: 100%; margin: 2rem 0 1.5rem 0;">
+        <tr style="border: none;">
+          <td style="border: none; text-align: center; width: 50%;">
+            <strong>Pembimbing I,</strong><br><br><br><br><br>
+            <u><strong>&lt;Nama dan Gelar Pembimbing I&gt;</strong></u><br>
+            NIP. XXXXXXXX
+          </td>
+          <td style="border: none; text-align: center; width: 50%;">
+            <strong>Pembimbing II,</strong><br><br><br><br><br>
+            <u><strong>&lt;Nama dan Gelar Pembimbing II&gt;</strong></u><br>
+            NIP. XXXXXXXX
+          </td>
+        </tr>
+      </table>
+
+      <div style="margin-top: 1.5rem;">
+        <strong>Kaprodi Teknologi Informasi,</strong><br><br><br><br><br>
+        <u><strong>Nama dan Gelar Kaprodi</strong></u><br>
+        NIP. XXXXXXXX
+      </div>
+    </div>
+    <div class="page-number">ii</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 3: LEMBAR PERNYATAAN ORISINALITAS (iii) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2>LEMBAR PERNYATAAN ORISINALITAS</h2>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin: 2rem 0;">
+      <div class="photo-box">
+        FOTO<br>FORMAL 4X6<br>BERWARNA
+      </div>
+      <div style="flex: 1; margin-left: 2.0rem;">
+        <table style="border: none; margin: 0; font-size: 10.5pt;">
+          <tr style="border: none;"><td style="border: none; width: 80px; padding: 6px 0;">Nama</td><td style="border: none; width: 15px;">:</td><td style="border: none;">Muhammad Febriano Aldo Syahputra</td></tr>
+          <tr style="border: none;"><td style="border: none; padding: 6px 0;">NIM</td><td style="border: none;">:</td><td style="border: none;">1202230021</td></tr>
+          <tr style="border: none;"><td style="border: none; padding: 6px 0; vertical-align: top;">Alamat</td><td style="border: none; vertical-align: top;">:</td><td style="border: none; color: #1d4ed8;">(Tuliskan alamat rumah anda, bukan alamat kost)</td></tr>
+          <tr style="border: none;"><td style="border: none; padding: 6px 0;">No. Telp</td><td style="border: none;">:</td><td style="border: none;">....................</td></tr>
+          <tr style="border: none;"><td style="border: none; padding: 6px 0;">Email</td><td style="border: none;">:</td><td style="border: none; font-family: monospace;">febrianoaldo@student.telkomuniversity.ac.id</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <p style="margin-top: 2rem; line-height: 1.7;">
+      Menyatakan bahwa Tugas Akhir ini merupakan karya orisinal saya sendiri. Atas pernyataan ini, saya siap menanggung risiko atau sanksi yang dijatuhkan kepada saya apabila kemudian ditemukan adanya pelanggaran terhadap kejujuran akademik atau etika keilmuan dalam karya ini, atau ditemukan bukti yang menunjukkan ketidakaslian karya ini.
+    </p>
+
+    <div style="float: right; text-align: center; margin-top: 3rem; width: 220px;">
+      Surabaya, ....................<br>
+      (Tanda Tangan)<br><br><br><br>
+      <span style="color: #1d4ed8; font-style: italic; font-size: 9pt;">(harus ttd basah mahasiswa)</span><br>
+      <strong>Muhammad Febriano Aldo Syahputra</strong>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="page-number">iii</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 4: ABSTRAK (iv) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2>ABSTRAK</h2>
+    </div>
+    <div style="margin-top: 1.5rem;">
+      <p>
+        Pengelolaan persediaan pada toko buku ritel menghadapi tantangan kompleks akibat tingginya keberagaman barang (<em>Stock Keeping Unit</em> / SKU) serta fluktuasi perputaran penjualan yang bervariasi. Ketidakterhubungan antara transaksi di meja kasir dan pencatatan fisik inventaris sering memicu terjadinya selisih stok (<em>stock discrepancy</em>) dan keterlambatan deteksi kehilangan barang. Di sisi lain, pelaksanaan pemeriksaan fisik (<em>stock opname</em>) harian secara menyeluruh terhadap seluruh SKU membebani sumber daya manusia yang terbatas. Penelitian ini bertujuan untuk merancang dan membangun sistem <em>Point of Sales</em> (POS) berbasis arsitektur <em>hybrid</em> berbiaya rendah dengan memanfaatkan PC Kasir sebagai <em>Home Server</em> mandiri (Python Flask dan SQLite) yang terhubung ke aplikasi Kasir Flutter Desktop secara lokal (<code>localhost</code>) dan ke aplikasi Admin Flutter Mobile secara <em>remote</em> melalui <em>Cloudflare Tunnel</em>. Sistem ini mengimplementasikan algoritma <em>Dynamic ABC Inventory Analysis</em> untuk mengklasifikasikan barang secara dinamis ke dalam Kelas A (80% omset), Kelas B (15% omset), dan Kelas C (5% omset). Klasifikasi ini dimanfaatkan untuk mengotomatisasi jadwal peringatan <em>stock opname</em> berkala (setiap 7 hari untuk Kelas A, 30 hari untuk Kelas B, dan 90 hari untuk Kelas C) serta menerapkan protokol keamanan transaksi atomik (<em>auto-deduct</em> dan <em>auto-revert</em>) yang mewajibkan validasi PIN Admin pada setiap pembatalan (<em>void</em>) transaksi barang Kelas A. Sistem dievaluasi melalui <em>API Integration Testing</em> menggunakan Postman dan <em>Black-Box Testing</em> fungsional. Solusi ini diharapkan mampu menghilangkan diskrepansi stok, menutup celah kecurangan kasir, serta memfasilitasi pemantauan inventaris jarak jauh secara <em>real-time</em> tanpa beban biaya langganan server <em>cloud</em>.
+      </p>
+      <p class="no-indent" style="margin-top: 1.2rem;">
+        <strong>Kata Kunci:</strong> <em>Point of Sales</em>, Diskrepansi Stok, <em>Dynamic ABC Analysis</em>, REST API, <em>Cloudflare Tunnel</em>, <em>Home Server</em>.
+      </p>
+    </div>
+    <div class="page-number">iv</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 5: ABSTRACT (v) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2>ABSTRACT</h2>
+    </div>
+    <div style="margin-top: 1.5rem; font-style: italic;">
+      <p>
+        Inventory management in retail bookstores faces complex operational challenges due to the large assortment of items (Stock Keeping Units / SKUs) and varying sales velocities. The disconnection between checkout counter transactions and physical inventory records frequently triggers stock discrepancies and delays physical shrinkage detection. On the other hand, conducting daily comprehensive physical inventory audits (stock opname) across all SKUs places an unsustainable burden on limited store human resources. This research aims to design and implement a cost-efficient hybrid Point of Sales (POS) system by utilizing the cashier PC as an autonomous Home Server (Python Flask and SQLite) connected to the Flutter Desktop cashier application locally via localhost and to the Flutter Mobile Admin application remotely via Cloudflare Tunnel. The system implements the Dynamic ABC Inventory Analysis algorithm to dynamically categorize inventory into Class A (80% cumulative revenue), Class B (15% revenue), and Class C (5% revenue). This classification automates periodic stock opname overdue alerts (every 7 days for Class A, 30 days for Class B, and 90 days for Class C) and enforces atomic transaction protocols (auto-deduct and auto-revert) requiring managerial PIN authorization for any void transaction involving Class A merchandise. The system is evaluated through Postman API Integration Testing and functional Black-Box Testing. This solution successfully eliminates stock discrepancies, closes loopholes for cashier transactional fraud, and provides real-time remote monitoring without recurring cloud server hosting expenses.
+      </p>
+      <p class="no-indent" style="margin-top: 1.2rem; font-style: normal;">
+        <strong>Keywords:</strong> <em>Point of Sales, Stock Discrepancy, Dynamic ABC Analysis, REST API, Cloudflare Tunnel, Home Server.</em>
+      </p>
+    </div>
+    <div class="page-number">v</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 6: KATA PENGANTAR (vi) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2>KATA PENGANTAR</h2>
+    </div>
+    <div style="margin-top: 1.5rem;">
+      <p>
+        Puji dan syukur penulis panjatkan ke hadirat Allah SWT atas limpahan rahmat, taufik, dan karunia-Nya, sehingga penulis dapat menyelesaikan proposal tugas akhir yang berjudul <strong>"SISTEM PENCEGAHAN DISKREPANSI MENGGUNAKAN ANALISIS ABC DAN ARSITEKTUR REST API PADA SISTEM POINT OF SALES"</strong>. Proposal ini disusun sebagai salah satu syarat akademis dalam menyelesaikan mata kuliah Proposal Tugas Akhir pada Program Studi Sarjana Teknologi Informasi, Direktorat Kampus Surabaya, Universitas Telkom.
+      </p>
+      <p>
+        Penyusunan naskah proposal ini tidak lepas dari bimbingan, arahan, saran, serta dukungan moril maupun materiil dari berbagai pihak. Oleh karena itu, pada kesempatan ini penulis menyampaikan ungkapan terima kasih yang tulus dan penghargaan setinggi-tingginya kepada:
+      </p>
+      <ol>
+        <li>Allah SWT atas segala berkah, kelancaran berpikir, dan kesehatan yang dilimpahkan kepada penulis.</li>
+        <li>Bapak dan Ibu Dosen Pembimbing yang telah dengan penuh kesabaran meluangkan waktu memberikan bimbingan, arahan keilmuan, serta koreksi konstruktif demi tercapainya mutu proposal yang komprehensif.</li>
+        <li>Ketua Program Studi Sarjana Teknologi Informasi, Direktorat Kampus Surabaya, Universitas Telkom beserta seluruh bapak/ibu dosen dan tenaga kependidikan atas bekal ilmu dan fasilitas pembelajaran yang diberikan.</li>
+        <li>Kedua orang tua dan keluarga tercinta, yang senantiasa memanjatkan doa, memberikan curahan kasih sayang, motivasi tanpa pamrih, serta pengorbanan yang tak ternilai bagi penulis.</li>
+        <li>Manajemen dan rekan-rekan staf toko buku ritel objek studi kasus, atas keterbukaan, izin pelaksanaan observasi partisipatif, serta data transaksi yang diberikan.</li>
+        <li>Rekan-rekan mahasiswa Program Studi Teknologi Informasi angkatan 2023, atas diskusi ilmiah, solidaritas, dan semangat persahabatan selama masa perkuliahan.</li>
+      </ol>
+      <p>
+        Penulis menyadari bahwa penyusunan naskah proposal ini masih memiliki keterbatasan. Oleh karena itu, penulis sangat mengharapkan masukan, kritik, dan saran yang bersifat membangun guna penyempurnaan implementasi penelitian pada tahapan selanjutnya. Semoga proposal ini dapat memberikan kontribusi nyata bagi perkembangan ilmu rekayasa perangkat lunak dan sistem informasi ritel.
+      </p>
+      <div style="float: right; text-align: center; margin-top: 2rem; width: 180px;">
+        Surabaya, Februari 2026<br><br><br><br>
+        <strong>Penulis</strong>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+    <div class="page-number">vi</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 7: DAFTAR ISI (vii) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2>DAFTAR ISI</h2>
+    </div>
+    <div style="margin-top: 1.5rem;">
+      <table class="toc-table">
+        <tr><td><strong>LEMBAR PENGESAHAN</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>ii</strong></td></tr>
+        <tr><td><strong>LEMBAR PERNYATAAN ORISINALITAS</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>iii</strong></td></tr>
+        <tr><td><strong>ABSTRAK</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>iv</strong></td></tr>
+        <tr><td><strong>ABSTRACT</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>v</strong></td></tr>
+        <tr><td><strong>KATA PENGANTAR</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>vi</strong></td></tr>
+        <tr><td><strong>DAFTAR ISI</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>vii</strong></td></tr>
+        <tr><td><strong>DAFTAR TABEL</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>ix</strong></td></tr>
+        <tr><td><strong>DAFTAR GAMBAR</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>x</strong></td></tr>
+        <tr><td><strong>DAFTAR LAMPIRAN</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>xi</strong></td></tr>
+        <tr><td><strong>DAFTAR ISTILAH</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>xii</strong></td></tr>
+        <tr><td><strong>BAB I PENDAHULUAN</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>1</strong></td></tr>
+        <tr><td style="padding-left: 20px;">1.1. Latar Belakang</td><td class="toc-dots"></td><td style="text-align: right;">1</td></tr>
+        <tr><td style="padding-left: 20px;">1.2. Rumusan Masalah</td><td class="toc-dots"></td><td style="text-align: right;">2</td></tr>
+        <tr><td style="padding-left: 20px;">1.3. Tujuan Penelitian</td><td class="toc-dots"></td><td style="text-align: right;">3</td></tr>
+        <tr><td style="padding-left: 20px;">1.4. Batasan dan Asumsi Penelitian</td><td class="toc-dots"></td><td style="text-align: right;">3</td></tr>
+        <tr><td style="padding-left: 40px;">1.4.1. Batasan Penelitian</td><td class="toc-dots"></td><td style="text-align: right;">3</td></tr>
+        <tr><td style="padding-left: 40px;">1.4.2. Asumsi Penelitian</td><td class="toc-dots"></td><td style="text-align: right;">3</td></tr>
+        <tr><td style="padding-left: 20px;">1.5. Manfaat Penelitian</td><td class="toc-dots"></td><td style="text-align: right;">4</td></tr>
+        <tr><td style="padding-left: 20px;">1.6. Sistematika Penulisan</td><td class="toc-dots"></td><td style="text-align: right;">4</td></tr>
+        <tr><td><strong>BAB II LANDASAN TEORI</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>5</strong></td></tr>
+        <tr><td style="padding-left: 20px;">2.1. Literatur Terkait Teori / Konsep Umum / Model / Kerangka Kerja</td><td class="toc-dots"></td><td style="text-align: right;">5</td></tr>
+        <tr><td style="padding-left: 40px;">2.1.1. Penelitian Terkait (<em>State of the Art</em>)</td><td class="toc-dots"></td><td style="text-align: right;">5</td></tr>
+        <tr><td style="padding-left: 40px;">2.1.2. Landasan Teori dan Konsep Sistem</td><td class="toc-dots"></td><td style="text-align: right;">6</td></tr>
+        <tr><td style="padding-left: 20px;">2.2. Alasan Pemilihan Teori / Model / Kerangka Kerja</td><td class="toc-dots"></td><td style="text-align: right;">8</td></tr>
+        <tr><td><strong>BAB III METODOLOGI PENELITIAN</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>10</strong></td></tr>
+        <tr><td style="padding-left: 20px;">3.1. Sistematika Penyelesaian Masalah</td><td class="toc-dots"></td><td style="text-align: right;">10</td></tr>
+        <tr><td style="padding-left: 40px;">3.1.1. Tahapan Penelitian dan Kerangka Kerja</td><td class="toc-dots"></td><td style="text-align: right;">10</td></tr>
+        <tr><td style="padding-left: 40px;">3.1.2. Metode Pengumpulan Data</td><td class="toc-dots"></td><td style="text-align: right;">10</td></tr>
+        <tr><td style="padding-left: 20px;">3.2. Metode Pengembangan Sistem (<em>Prototyping Model</em>)</td><td class="toc-dots"></td><td style="text-align: right;">11</td></tr>
+        <tr><td style="padding-left: 20px;">3.3. Perancangan Arsitektur Sistem dan Jaringan <em>Hybrid</em></td><td class="toc-dots"></td><td style="text-align: right;">12</td></tr>
+        <tr><td style="padding-left: 20px;">3.4. Perancangan Basis Data (SQLite)</td><td class="toc-dots"></td><td style="text-align: right;">12</td></tr>
+        <tr><td style="padding-left: 20px;">3.5. Perancangan Algoritma Bisnis Utama</td><td class="toc-dots"></td><td style="text-align: right;">12</td></tr>
+        <tr><td style="padding-left: 40px;">3.5.1. Formulasi Matematis <em>Dynamic ABC Inventory Analysis</em></td><td class="toc-dots"></td><td style="text-align: right;">12</td></tr>
+        <tr><td style="padding-left: 40px;">3.5.2. Mekanisme Transaksi Atomik & Proteksi PIN <em>Void</em></td><td class="toc-dots"></td><td style="text-align: right;">13</td></tr>
+        <tr><td style="padding-left: 20px;">3.6. Rancangan Pengujian Sistem</td><td class="toc-dots"></td><td style="text-align: right;">14</td></tr>
+        <tr><td><strong>DAFTAR PUSTAKA</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>15</strong></td></tr>
+        <tr><td><strong>LAMPIRAN</strong></td><td class="toc-dots"></td><td style="text-align: right;"><strong>16</strong></td></tr>
+      </table>
+    </div>
+    <div class="page-number">vii</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 8: DAFTAR TABEL & DAFTAR GAMBAR (ix & x) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2>DAFTAR TABEL</h2>
+    </div>
+    <div style="margin-top: 1.5rem; margin-bottom: 2.5rem;">
+      <table class="toc-table">
+        <tr><td>Tabel 2.1 Matriks Perbandingan Penelitian Terkait (<em>State of the Art</em>)</td><td class="toc-dots"></td><td style="text-align: right;">6</td></tr>
+        <tr><td>Tabel 3.1 Spesifikasi Komponen Arsitektur Sistem POS <em>Hybrid</em></td><td class="toc-dots"></td><td style="text-align: right;">12</td></tr>
+        <tr><td>Tabel 3.2 Kamus Data dan Spesifikasi Entitas Basis Data SQLite</td><td class="toc-dots"></td><td style="text-align: right;">12</td></tr>
+      </table>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <h2>DAFTAR GAMBAR</h2>
+    </div>
+    <div style="margin-top: 1.5rem;">
+      <table class="toc-table">
+        <tr><td>Gambar 3.1 Diagram Alur Sistematika Tahapan Penelitian</td><td class="toc-dots"></td><td style="text-align: right;">10</td></tr>
+        <tr><td>Gambar 3.2 Siklus Pengembangan Perangkat Lunak Menggunakan <em>Prototyping Model</em></td><td class="toc-dots"></td><td style="text-align: right;">11</td></tr>
+      </table>
+    </div>
+    <div class="page-number">ix</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 9: DAFTAR LAMPIRAN & DAFTAR ISTILAH (xi & xii) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2>DAFTAR LAMPIRAN</h2>
+    </div>
+    <div style="margin-top: 1.2rem; margin-bottom: 2.5rem;">
+      <table class="toc-table">
+        <tr><td>Lampiran 1: Struktur Skema Basis Data SQLite dan Spesifikasi Endpoint REST API</td><td class="toc-dots"></td><td style="text-align: right;">16</td></tr>
+        <tr><td>Lampiran 2: Instrumen Observasi Partisipatif dan Pedoman Wawancara Staf Kasir</td><td class="toc-dots"></td><td style="text-align: right;">17</td></tr>
+      </table>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <h2>DAFTAR ISTILAH</h2>
+    </div>
+    <div style="margin-top: 1.2rem;">
+      <table>
+        <thead>
+          <tr><th style="width: 25%;">Istilah / Singkatan</th><th style="width: 75%;">Definisi dan Keterangan</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>POS</strong></td><td><em>Point of Sales</em>, sistem perangkat lunak dan keras untuk pencatatan transaksi penjualan kasir.</td></tr>
+          <tr><td><strong>SKU</strong></td><td><em>Stock Keeping Unit</em>, kode unik yang mengidentifikasi setiap varian barang secara spesifik.</td></tr>
+          <tr><td><strong>Stock Discrepancy</strong></td><td>Selisih kuantitas persediaan antara catatan sistem dan fisik riil barang di toko/gudang.</td></tr>
+          <tr><td><strong>Stock Opname</strong></td><td>Pemeriksaan fisik persediaan secara berkala untuk memvalidasi akurasi data sistem.</td></tr>
+          <tr><td><strong>Dynamic ABC</strong></td><td>Klasifikasi Pareto otomatis (Kelas A, B, C) yang terbarui mengikuti mutasi transaksi berjalan.</td></tr>
+          <tr><td><strong>REST API</strong></td><td>Antarmuka layanan web standar menggunakan format JSON dan protokol HTTP.</td></tr>
+          <tr><td><strong>Home Server</strong></td><td>Pemanfaatan PC Kasir di toko sebagai server independen berbiaya nol langganan.</td></tr>
+          <tr><td><strong>Cloudflare Tunnel</strong></td><td>Terowongan koneksi keluar terenkripsi menuju Cloudflare tanpa IP publik statis.</td></tr>
+          <tr><td><strong>ACID</strong></td><td>Prinsip transaksi basis data (Atomicity, Consistency, Isolation, Durability) pencegah selisih data.</td></tr>
+          <tr><td><strong>Auto-deduct / Revert</strong></td><td>Pemotongan dan pengembalian stok secara otomatis dan atomik saat penjualan atau pembatalan.</td></tr>
+          <tr><td><strong>Void</strong></td><td>Pembatalan nota kasir yang mewajibkan otorisasi PIN manajer pada item bernilai tinggi.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="page-number">xii</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 10: BAB I PENDAHULUAN (Halaman 1) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2 style="margin-bottom: 0.2rem;">BAB I</h2>
+      <h2 style="margin-top: 0; margin-bottom: 1.5rem;">PENDAHULUAN</h2>
+    </div>
+
+    <h3>1.1. Latar Belakang</h3>
+    <p>
+      Transformasi digital pada sektor perdagangan ritel menuntut pergeseran paradigma dari tata kelola konvensional menuju sistem informasi yang terintegrasi guna mengoptimalkan efisiensi waktu serta akurasi pengolahan data (Putra & Saputro, 2026). Meskipun demikian, adopsi teknologi informasi pada sektor Usaha Mikro, Kecil, dan Menengah (UMKM) ritel masih menghadapi kendala operasional yang serius akibat ketergantungan pada pencatatan manual maupun aplikasi <em>spreadsheet</em> sederhana yang terpisah dari basis data terpusat (Nisa, 2026). Pada industri ritel toko buku, kompleksitas pengelolaan inventaris menjadi jauh lebih tinggi karena karakteristik produknya yang mencakup ratusan hingga ribuan judul barang (<em>Stock Keeping Unit</em> / SKU) dengan tingkat perputaran penjualan yang sangat bervariasi. Tanpa dukungan sistem informasi <em>Point of Sales</em> (POS) yang terintegrasi secara <em>real-time</em>, ketidaksinkronan antara mutasi transaksi di meja kasir dan pencatatan stok fisik di rak maupun gudang akan memicu terjadinya selisih data persediaan atau <em>stock discrepancy</em>.
+    </p>
+    <p>
+      Berdasarkan observasi partisipatif peneliti selama bertugas sebagai <em>Sales Support Assistant</em> (SSA) pada objek studi kasus toko buku ritel, ditemukan dua akar permasalahan utama dari sisi infrastruktur jaringan dan operasional harian. Pertama, dari sisi infrastruktur, sistem kasir lama beroperasi secara <em>offline</em> dan terisolasi di masing-masing perangkat lokal. Untuk melaporkan penjualan harian, staf harus mengekspor berkas berformat <code>.dat</code> secara manual, mengirimkannya melalui WhatsApp kepada admin pusat, lalu merekapitulasi ulang ke Excel (Nisa, 2026; Malfin et al., 2026). Mekanisme ini membuka celah keamanan bagi oknum kasir untuk melakukan kecurangan (<em>fraud</em>), seperti manipulasi pembatalan transaksi (<em>void</em>) atau penggelapan barang tanpa terdeteksi.
+    </p>
+    <p>
+      Kedua, dari sisi operasional fisik, karyawan toko kewalahan apabila diwajibkan melakukan pengecekan fisik (<em>stock opname</em>) terhadap 600 SKU buku secara merata setiap hari. Sejalan dengan temuan Suprayitno & Parashakti (2026), ketiadaan skala prioritas inventaris memicu inefisiensi dan kelalaian, di mana buku <em>best-seller</em> bernilai tinggi justru kerap mengalami selisih fisik yang terlambat terdeteksi.
+    </p>
+    <p>
+      Untuk mengatasi permasalahan tersebut, penelitian ini mengusulkan rancang bangun <strong>"Sistem Pencegahan Diskrepansi Menggunakan Analisis ABC dan Arsitektur REST API pada Sistem Point of Sales"</strong> dengan memanfaatkan PC Kasir sebagai <em>Home Server</em> mandiri (Python Flask dan SQLite) yang terhubung ke aplikasi Kasir Flutter Desktop secara lokal (<code>localhost</code>) dan ke aplikasi Admin Flutter Mobile secara <em>remote</em> melalui <em>Cloudflare Tunnel</em>, didukung algoritma <em>Dynamic ABC Inventory Analysis</em> dan proteksi PIN Admin pada transaksi <em>void</em>.
+    </p>
+
+    <h3>1.2. Rumusan Masalah</h3>
+    <ol>
+      <li>Bagaimana merancang dan membangun arsitektur sistem POS berbasis REST API dengan infrastruktur <em>Home Server</em> dan <em>Cloudflare Tunnel</em> yang mampu menjamin transaksi kasir lokal berjalan tanpa jeda (<em>zero-delay</em>) sekaligus mendukung sinkronisasi pemantauan stok jarak jauh secara <em>real-time</em>?</li>
+      <li>Bagaimana mengimplementasikan algoritma <em>Dynamic ABC Inventory Analysis</em> pada <em>backend</em> Python Flask untuk mengklasifikasikan prioritas barang (Kelas A, B, dan C) secara otomatis guna menghasilkan penjadwalan <em>alert stock opname</em> yang terarah?</li>
+      <li>Bagaimana menerapkan mekanisme pengamanan mutasi stok otomatis (<em>auto-deduct</em> dan <em>auto-revert</em>) beserta validasi otorisasi PIN Admin pada pembatalan (<em>void</em>) transaksi barang Kelas A guna mencegah terjadinya diskrepansi stok dan menutup celah manipulasi kasir?</li>
+    </ol>
+
+    <h3>1.3. Tujuan Penelitian</h3>
+    <ol>
+      <li>Menghasilkan rancang bangun sistem POS <em>multi-platform</em> (Flutter Desktop dan Mobile) berbasis arsitektur REST API (Python Flask dan SQLite) yang memadukan keandalan akses lokal <em>Home Server</em> dengan aksesibilitas <em>remote</em> melalui <em>Cloudflare Tunnel</em>.</li>
+      <li>Mengimplementasikan algoritma <em>Dynamic ABC Inventory Analysis</em> yang akurat dalam mengelompokkan inventaris buku ke dalam Kelas A, B, dan C secara otomatis, serta memicu notifikasi jadwal <em>stock opname</em> berkala.</li>
+      <li>Menerapkan protokol transaksi atomik (<em>auto-deduct</em> dan <em>auto-revert</em>) yang dilengkapi fitur otorisasi PIN Admin pada pembatalan transaksi barang Kelas A guna menekan angka <em>stock discrepancy</em>.</li>
+    </ol>
+
+    <h3>1.4. Batasan dan Asumsi Penelitian</h3>
+    <h4>1.4.1. Batasan Penelitian</h4>
+    <ol style="list-style-type: lower-alpha;">
+      <li><strong>Objek dan Data:</strong> Studi kasus toko buku ritel dengan mengolah <em>dataset</em> 600 SKU beserta riwayat penjualannya.</li>
+      <li><strong>Infrastruktur:</strong> PC Kasir sebagai <em>Home Server</em> lokal (Python Flask & SQLite), terhubung ke Kasir Desktop via <code>localhost:5000</code> dan ke Admin Mobile via <em>Cloudflare Tunnel</em>.</li>
+      <li><strong>Metode ABC:</strong> Menggunakan nilai kumulatif penjualan kotor dengan ambang batas 80% (Kelas A), 15% (Kelas B), dan 5% (Kelas C).</li>
+      <li><strong>Keamanan:</strong> Siklus opname 7 hari (Kelas A), 30 hari (Kelas B), 90 hari (Kelas C); <em>void</em> Kelas A wajib otorisasi PIN Admin di sisi server.</li>
+      <li><strong>Fungsionalitas:</strong> Berfokus pada transaksi kasir, mutasi stok, algoritma ABC dinamis, peringatan opname, dan otorisasi PIN <em>void</em>.</li>
+    </ol>
+
+    <h4>1.4.2. Asumsi Penelitian</h4>
+    <ol style="list-style-type: lower-alpha;">
+      <li>Minimal satu unit PC Kasir utama beroperasi aktif selama jam buka toko untuk bertindak sebagai <em>Home Server</em>.</li>
+      <li>Seluruh transaksi kasir diinput secara konsisten melalui aplikasi POS tanpa transaksi manual di luar sistem.</li>
+      <li>Koneksi internet toko diasumsikan tersedia untuk sinkronisasi Cloudflare, namun pemadaman internet diasumsikan tidak mengganggu kasir lokal.</li>
+    </ol>
+
+    <h3>1.5. Manfaat Penelitian</h3>
+    <ol>
+      <li><strong>Manfaat Teoritis:</strong> Memberikan kontribusi pada integrasi algoritma manajemen operasional ke dalam REST API serta referensi pemanfaatan <em>edge server</em> lokal terenkripsi.</li>
+      <li><strong>Manfaat Praktis Manajemen:</strong> Meniadakan biaya sewa bulanan server VPS, memfasilitasi pemantauan <em>real-time</em> via smartphone, serta mengamankan barang Kelas A dari risiko pencurian dan manipulasi nota.</li>
+      <li><strong>Manfaat Praktis Staf Toko:</strong> Menghilangkan ekspor manual via WhatsApp dan rekapitulasi Excel, mempercepat pelayanan pelanggan, serta meringankan beban opname fisik harian.</li>
+    </ol>
+
+    <h3>1.6. Sistematika Penulisan</h3>
+    <p>
+      Proposal ini disusun ke dalam: <strong>BAB I PENDAHULUAN</strong> (latar belakang, masalah, batasan, asumsi, tujuan, manfaat); <strong>BAB II LANDASAN TEORI</strong> (penelitian terdahulu, matriks komparasi, landasan teoretis, alasan pemilihan metode); <strong>BAB III METODOLOGI PENELITIAN</strong> (tahapan kerangka kerja, pengumpulan data, prototyping model, arsitektur, basis data, algoritma ABC, pengujian); <strong>DAFTAR PUSTAKA</strong>; dan <strong>LAMPIRAN</strong>.
+    </p>
+    <div class="page-number">1</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 11: BAB II LANDASAN TEORI (Halaman 5) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2 style="margin-bottom: 0.2rem;">BAB II</h2>
+      <h2 style="margin-top: 0; margin-bottom: 1.5rem;">LANDASAN TEORI</h2>
+    </div>
+
+    <h3>2.1. Literatur Terkait Teori / Konsep Umum / Model / Kerangka Kerja</h3>
+    <h4>2.1.1. Penelitian Terkait (<em>State of the Art</em>)</h4>
+    <p>
+      Kajian terhadap penelitian-penelitian terdahulu mencakup: (1) <strong>Putra & Saputro (2026)</strong> yang menerapkan REST API Laravel dan <em>DB Transaction</em> untuk auto-deduct stok toko sembako; (2) <strong>Malfin et al. (2026)</strong> yang mengembangkan POS ReactJS-ExpressJS dengan kendala ketergantungan VPS cloud; (3) <strong>Nisa (2026)</strong> yang merancang POS web agile dengan saran penambahan potong stok otomatis dan aplikasi mobile; (4) <strong>Lutfiah et al. (2024)</strong> yang menerapkan Analisis ABC 80-15-5 pada modul inventaris ERP rumah sakit; (5) <strong>Suprayitno & Parashakti (2026)</strong> yang membuktikan efektivitas Analisis ABC penataan rak gudang logistik; (6) <strong>Ardiansyah et al. (2025)</strong> yang memadukan ABC dengan <em>Periodic Review System</em>; serta (7) <strong>Akhtar & Herlina (2026)</strong> dan <strong>Patabi et al. (2026)</strong> yang mendemonstrasikan prosedur sistematis kalkulasi persentase kumulatif Pareto.
+    </p>
+
+    <div class="caption">Tabel 2.1 Matriks Perbandingan Penelitian Terkait (<em>State of the Art</em>)</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 22%;">Peneliti & Tahun</th>
+          <th style="width: 24%;">Metode & Teknologi</th>
+          <th style="width: 24%;">Fitur Utama</th>
+          <th style="width: 30%;"><em>Research Gap</em> & Posisi Penelitian Ini</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Putra & Saputro (2026)</td><td>Waterfall, REST API Laravel, MySQL</td><td>Potong stok otomatis</td><td>Belum ada Analisis ABC dan otorisasi PIN <em>void</em>.</td></tr>
+        <tr><td>Malfin et al. (2026)</td><td>ReactJS, ExpressJS, VPS</td><td>POS SPA, Atomic Transaction</td><td>Bergantung internet VPS dan belum ada ABC dinamis.</td></tr>
+        <tr><td>Nisa (2026)</td><td>Agile Backlog, Laravel Web</td><td>Shift kasir & verifikasi refund</td><td>Belum ada potong stok otomatis dan aplikasi mobile.</td></tr>
+        <tr><td>Lutfiah et al. (2024)</td><td>Quickstart, ERP Odoo, ABC</td><td>Sentralisasi basis data medis</td><td>ERP Odoo kompleks, bukan sistem POS ritel ringan.</td></tr>
+        <tr><td>Suprayitno & Parashakti (2026)</td><td>Kuantitatif, Analisis ABC</td><td>Penataan rak berbasis Pareto</td><td>Perhitungan manual, belum terintegrasi sistem kasir.</td></tr>
+        <tr><td>Ardiansyah et al. (2025)</td><td>ABC & Periodic Review</td><td>Klasifikasi stok buah segar</td><td>Analisis di luar sistem, belum ada <em>alert opname</em>.</td></tr>
+        <tr><td>Akhtar & Herlina (2026); Patabi et al. (2026)</td><td>Analisis ABC, EOQ/POQ, ABC-VEN</td><td>Pemetaan item fast/slow moving</td><td>Pengolahan retrospektif tahunan, belum <em>real-time</em> di POS.</td></tr>
+        <tr style="background-color: #f1f5f9; font-weight: bold;">
+          <td>Penelitian Ini (2026)</td>
+          <td>Prototyping, Python Flask, SQLite, Flutter, Cloudflare</td>
+          <td>Dynamic ABC API, alert opname, auto-deduct/revert, PIN void</td>
+          <td>Menyatukan POS lokal <em>zero-delay</em>, akses remote bebas VPS, efisiensi Pareto, & cegah fraud.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>2.1.2. Landasan Teori dan Konsep Sistem</h4>
+    <ol style="list-style-type: lower-roman;">
+      <li><strong>Sistem POS dan Diskrepansi Stok:</strong> POS mengintegrasikan penjualan dan stok (Nisa, 2026; Putra & Saputro, 2026). Diskrepansi dicegah melalui mekanisme <em>auto-deduct</em> dan <em>auto-revert</em>.</li>
+      <li><strong>Dynamic ABC Inventory Analysis:</strong> Berakar pada Hukum Pareto (Heizer et al., 2020), membagi katalog menjadi Kelas A (80% omset), B (15%), dan C (5%) secara dinamis.</li>
+      <li><strong>REST API, Home Server, dan Cloudflare Tunnel:</strong> Komunikasi JSON ringan melalui HTTP. PC Kasir melayani transaksi lokal tanpa jeda, sementara Cloudflare Tunnel menyediakan akses internet aman tanpa IP statis.</li>
+      <li><strong>Python Flask, SQLite, Transaksi Atomik, dan Flutter:</strong> Flask sebagai mikro-kerangka REST API, SQLite untuk basis data ACID lokal, dan Flutter untuk aplikasi kasir desktop dan admin mobile.</li>
+    </ol>
+
+    <h3>2.2. Alasan Pemilihan Teori / Model / Kerangka Kerja</h3>
+    <ol>
+      <li><strong>Alasan Analisis ABC Dinamis:</strong> Memfokuskan pengawasan harian staf toko pada 20% buku Kelas A yang bernilai kritis, menggantikan opname harian 600 SKU yang memicu kejenuhan staf dan kelalaian pencatatan.</li>
+      <li><strong>Alasan Arsitektur Hybrid & Home Server:</strong> Menjamin kasir tetap beroperasi 100% normal saat internet padam dengan latensi <em>zero-delay</em>, serta meniadakan biaya langganan sewa VPS bulanan.</li>
+      <li><strong>Alasan Transaksi Atomik & PIN Void:</strong> Menjamin konsistensi data mutasi stok melalui ACID dan memblokir celah manipulasi kasir pada pembatalan nota item mahal.</li>
+      <li><strong>Alasan Prototyping Model:</strong> Memungkinkan evaluasi antarmuka kasir dan penyesuaian parameter opname secara langsung bersama pengguna sejak tahap perancangan awal.</li>
+    </ol>
+    <div class="page-number">5</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 12: BAB III METODOLOGI PENELITIAN (Halaman 10) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2 style="margin-bottom: 0.2rem;">BAB III</h2>
+      <h2 style="margin-top: 0; margin-bottom: 1.5rem;">METODOLOGI PENELITIAN</h2>
+    </div>
+
+    <h3>3.1. Sistematika Penyelesaian Masalah</h3>
+    <h4>3.1.1. Tahapan Penelitian dan Kerangka Kerja</h4>
+    <p>
+      Penelitian ini dilaksanakan melalui 6 tahapan terstruktur sebagaimana divisualisasikan pada Gambar 3.1:
+    </p>
+
+    <div style="margin: 1.0rem auto; max-width: 95%;">
+      <div class="diagram-box"><strong>1. Identifikasi Masalah & Studi Literatur</strong><br><small>Observasi diskrepansi stok ritel toko buku & studi literatur POS, ABC, REST API.</small></div>
+      <div class="diagram-arrow">&darr;</div>
+      <div class="diagram-box"><strong>2. Pengumpulan & Analisis Data</strong><br><small>Akuisisi dataset 600 SKU, wawancara parameter jadwal opname, & pemetaan kasir.</small></div>
+      <div class="diagram-arrow">&darr;</div>
+      <div class="diagram-box"><strong>3. Perancangan Sistem Hybrid</strong><br><small>Desain arsitektur Home Server, Cloudflare Tunnel, skema basis data SQLite, formulasi ABC.</small></div>
+      <div class="diagram-arrow">&darr;</div>
+      <div class="diagram-box"><strong>4. Implementasi Perangkat Lunak</strong><br><small>Pengkodean REST API Flask, kalkulasi Dynamic ABC, antarmuka Flutter Desktop & Mobile.</small></div>
+      <div class="diagram-arrow">&darr;</div>
+      <div class="diagram-box"><strong>5. Pengujian & Evaluasi Sistem</strong><br><small>Postman API Integration Testing & Black-Box Testing fungsional kasir/admin.</small></div>
+      <div class="diagram-arrow">&darr;</div>
+      <div class="diagram-box"><strong>6. Penulisan Laporan & Kesimpulan</strong><br><small>Analisis data pengujian, penarikan kesimpulan akhir, dan perumusan saran.</small></div>
+    </div>
+    <div class="figure-caption">Gambar 3.1 Diagram Alur Sistematika Tahapan Penelitian</div>
+
+    <h4>3.1.2. Metode Pengumpulan Data</h4>
+    <ol>
+      <li><strong>Observasi Partisipatif:</strong> Mengamati langsung alur pelayanan kasir dan pemeriksaan stok di toko buku ritel.</li>
+      <li><strong>Permintaan Data Langsung:</strong> Mengakuisisi katalog 600 SKU dan riwayat transaksi penjualan dari manajemen toko.</li>
+      <li><strong>Wawancara Terstruktur:</strong> Berdiskusi dengan manajer toko terkait ambang batas jadwal opname dan proteksi PIN.</li>
+      <li><strong>Studi Literatur:</strong> Mengkaji rujukan jurnal bereputasi terkait Analisis ABC, REST API, Flask, SQLite, dan Flutter.</li>
+    </ol>
+
+    <h3>3.2. Metode Pengembangan Sistem (<em>Prototyping Model</em>)</h3>
+    <p>
+      Pengembangan sistem dilakukan melalui siklus <em>Prototyping Model</em> (Gambar 3.2): (1) Pengumpulan Kebutuhan; (2) Perancangan Cepat; (3) Pembangunan Prototipe; (4) Evaluasi bersama Kasir/Manajer; (5) Pengkodean Sistem Penuh; dan (6) Pengujian Sistem.
+    </p>
+
+    <div style="margin: 1.0rem auto; max-width: 90%;">
+      <div class="diagram-box" style="border-color: #16a34a; background-color: #f0fdf4;"><strong>1. Pengumpulan Kebutuhan &rarr; 2. Perancangan Cepat &rarr; 3. Bangun Prototipe</strong></div>
+      <div class="diagram-arrow" style="color: #16a34a;">&darr; &uarr; <em>(Iterasi Umpan Balik Pengguna)</em></div>
+      <div class="diagram-box" style="border-color: #16a34a; background-color: #f0fdf4;"><strong>4. Evaluasi Prototipe &rarr; 5. Pengkodean Sistem &rarr; 6. Pengujian Sistem</strong></div>
+    </div>
+    <div class="figure-caption">Gambar 3.2 Siklus Pengembangan Perangkat Lunak Menggunakan <em>Prototyping Model</em></div>
+
+    <h3>3.3. Perancangan Arsitektur Sistem dan Jaringan <em>Hybrid</em></h3>
+    <div class="caption">Tabel 3.1 Spesifikasi Komponen Arsitektur Sistem POS <em>Hybrid</em></div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 22%;">Komponen</th>
+          <th style="width: 20%;">Teknologi</th>
+          <th style="width: 25%;">Protokol Komunikasi</th>
+          <th style="width: 33%;">Peran Fungsional</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Client Kasir</td><td>Flutter Desktop</td><td>HTTP (localhost:5000)</td><td>Transaksi lokal bebas internet, cetak struk, dialog PIN void.</td></tr>
+        <tr><td>Client Admin</td><td>Flutter Mobile</td><td>HTTPS (Cloudflare URL)</td><td>Pemantauan omset real-time, alert opname, kelola master buku.</td></tr>
+        <tr><td>Gateway Terowongan</td><td>Cloudflare Daemon</td><td>Outbound Encrypted Tunnel</td><td>Membuka akses publik aman tanpa IP statis dan tanpa sewa VPS.</td></tr>
+        <tr><td>Application Layer</td><td>Python Flask</td><td>RESTful API (JSON)</td><td>Kalkulasi Dynamic ABC, transaksi atomik, validasi PIN Admin.</td></tr>
+        <tr><td>Data Layer</td><td>Basis Data SQLite</td><td>Embedded File Connection</td><td>Penyimpanan ACID master buku, transaksi nota, rincian item, settings.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>3.4. Perancangan Basis Data (SQLite)</h3>
+    <div class="caption">Tabel 3.2 Kamus Data dan Spesifikasi Entitas Basis Data SQLite</div>
+    <table>
+      <thead>
+        <tr><th style="width: 22%;">Nama Tabel</th><th style="width: 32%;">Atribut Kunci</th><th style="width: 46%;">Deskripsi dan Fungsi Penyimpanan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>books</code></td><td>id (PK), sku, title, price, stock, abc_class, last_opname</td><td>Master inventaris buku, stok fisik, kelas ABC, dan tanggal opname.</td></tr>
+        <tr><td><code>transactions</code></td><td>id (PK), invoice_no, total_amount, created_at, status</td><td>Header transaksi nota penjualan kasir (completed atau void).</td></tr>
+        <tr><td><code>transaction_items</code></td><td>id (PK), transaction_id (FK), book_id (FK), qty, subtotal</td><td>Rincian item untuk akumulasi omset per SKU pada algoritma ABC.</td></tr>
+        <tr><td><code>settings</code></td><td>key (PK), value</td><td>Hash PIN Admin untuk otorisasi pembatalan nota Kelas A.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>3.5. Perancangan Algoritma Bisnis Utama</h3>
+    <h4>3.5.1. Formulasi Matematis <em>Dynamic ABC Inventory Analysis</em></h4>
+    <p class="no-indent">
+      Omset per SKU: <em>R<sub>i</sub></em> = &sum; subtotal<sub><em>i</em></sub> &emsp;|&emsp;
+      Total Omset: <em>R</em><sub>total</sub> = &sum; <em>R<sub>i</sub></em><br>
+      Kontribusi individual: <em>p<sub>k</sub></em> = (<em>R<sub>k</sub></em> / <em>R</em><sub>total</sub>) &times; 100% &emsp;|&emsp;
+      Kumulatif: <em>C<sub>k</sub></em> = &sum; <em>p<sub>j</sub></em>
+    </p>
+    <p class="no-indent" style="background-color: #f8fafc; padding: 10px; border-radius: 4px; border-left: 3px solid #2563eb;">
+      <strong>Kelas A (Opname &le; 7 hari):</strong> 0% &lt; <em>C<sub>k</sub></em> &le; 80,00%<br>
+      <strong>Kelas B (Opname &le; 30 hari):</strong> 80,00% &lt; <em>C<sub>k</sub></em> &le; 95,00%<br>
+      <strong>Kelas C (Opname &le; 90 hari):</strong> 95,00% &lt; <em>C<sub>k</sub></em> &le; 100,00%
+    </p>
+
+    <h4>3.5.2. Mekanisme Transaksi Atomik & Proteksi PIN <em>Void</em></h4>
+    <ol style="list-style-type: lower-alpha;">
+      <li><strong>Checkout Auto-deduct:</strong> Pengurangan stok dan pembuatan nota dieksekusi dalam blok transaksi atomik SQLite (ACID). Jika terjadi eror, sistem langsung melakukan <em>rollback</em> otomatis.</li>
+      <li><strong>Void Auto-revert:</strong> Pembatalan nota yang memuat minimal 1 item Kelas A mewajibkan input PIN Admin. Jika PIN tidak sesuai, server menolak dengan kode HTTP 401 Unauthorized.</li>
+    </ol>
+
+    <h3>3.6. Rancangan Pengujian Sistem</h3>
+    <ol>
+      <li><strong>API Integration Testing:</strong> Menguji 6 endpoint Flask menggunakan Postman dengan tolok ukur response time &lt; 200 ms dan kode HTTP status valid.</li>
+      <li><strong>Black-Box Testing:</strong> Menguji antarmuka aplikasi Kasir dan Admin untuk seluruh skenario transaksi, peringatan stok, dan cetak nota.</li>
+    </ol>
+    <div class="page-number">10</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 13: DAFTAR PUSTAKA (Halaman 15) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2>DAFTAR PUSTAKA</h2>
+    </div>
+
+    <div style="margin-top: 1.0rem; margin-bottom: 1.5rem; padding: 0.6rem 0.9rem; background-color: #f8fafc; border-left: 4px solid #b91c1c; border-radius: 4px; font-size: 8.5pt; color: #334155;">
+      <strong>Catatan Kurasi:</strong> Menampilkan 9 referensi aktif terpilih (terbaru, bereputasi, dan langsung dirujuk dalam naskah). Sebanyak 7 referensi cadangan lainnya tersimpan rapi untuk arsip di berkas <code>daftar_pustaka_arsip.tex</code>.
+    </div>
+
+    <div style="margin-top: 1.2rem;">
+      <div class="ref-item">Akhtar, M. A., & Herlina. (2026). Penerapan Metode EOQ, POQ dan Analisis ABC dalam pengendalian persediaan bahan baku Coffee Shop. <em>JUTIN: Jurnal Teknik Industri Terintegrasi</em>, 9(1), 141&ndash;145. <a href="https://doi.org/10.31004/jutin.v9i1.52298" target="_blank">https://doi.org/10.31004/jutin.v9i1.52298</a></div>
+      <div class="ref-item">Ardiansyah, A., Alfarisi, S., & Tauhida, D. (2025). Pengendalian Persediaan Buah Segar Menggunakan Analisis ABC, Single Period Model dan Periodic Review System. <em>Jurnal Teknologi</em>, 18(1), 57&ndash;65. <a href="https://doi.org/10.34151/jurtek.v18i1.4423" target="_blank">https://doi.org/10.34151/jurtek.v18i1.4423</a></div>
+      <div class="ref-item">Heizer, J., Render, B., & Munson, C. (2020). <em>Operations management: Sustainability and supply chain management</em> (13th ed.). Pearson Education.</div>
+      <div class="ref-item">Lutfiah, D. P., Ridwan, A. Y., Hediyanto, U. Y. K. S., & Kusumahastuti, K. P. (2024). Pengembangan Sistem ERP Modul Inventory untuk Proses Penyimpanan Alat Medis pada Instalasi Kedokteran Nuklir RSHS dengan Metode Quickstart. <em>Jurnal Indonesia: Manajemen Informatika dan Komunikasi (JIMIK)</em>, 5(1), 66&ndash;79. <a href="https://doi.org/10.35870/jimik.v5i1.433" target="_blank">https://doi.org/10.35870/jimik.v5i1.433</a></div>
+      <div class="ref-item">Malfin, M., Sudirman, B., & Aqham, A. A. (2026). Rancang Bangun Aplikasi Kasir Berbasis Web Menggunakan Library ReactJS dan Framework ExpressJS (Studi Kasus Toko Haii Shoes Kendal). <em>Jurnal Informatika dan Teknologi Komputer (JITEK)</em>, 6(2), 69&ndash;80. <a href="https://doi.org/10.55606/jitek.v6i2.11066" target="_blank">https://doi.org/10.55606/jitek.v6i2.11066</a></div>
+      <div class="ref-item">Nisa, L. F. (2026). Perancangan Sistem Informasi Point Of Sales Menggunakan Metode Agile Berbasis Website (Studi Kasus: Hello Nara Coffee). <em>Journal of Information Systems and Business Technology (JISBT)</em>, 2(4), 1186&ndash;1195.</div>
+      <div class="ref-item">Patabi, W., Fanani, Z., Sunnah, I., & Muliawan, A. I. (2026). Analisis Manajemen Persediaan Obat dengan Metode ABC-VEN di Rumah Sakit Yasyfin Darussalam Gontor. <em>Jurnal JOUBAHS</em>, 6(2), 140&ndash;148.</div>
+      <div class="ref-item">Putra, D. G. S., & Saputro, I. A. (2026). Integrasi REST API Laravel-MySQL untuk Sinkronisasi Stok Toko Sembako Mbah Wiro. <em>JAHT: Journal of Applied Agriculture, Health, and Technology</em>, 5(1), 21&ndash;33. <a href="https://doi.org/10.20961/jaht.v5i1.3341" target="_blank">https://doi.org/10.20961/jaht.v5i1.3341</a></div>
+      <div class="ref-item">Suprayitno, A., & Parashakti, R. D. (2026). Analisis ABC dalam Penataan dan Penomoran Rak Gudang Logistik Unit PPPA Universitas Dian Nusantara Jakarta. <em>Jurnal Ekonomi Manajemen Sistem Informasi (JEMSI)</em>, 7(3).</div>
+    </div>
+    <div class="page-number">15</div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HALAMAN 14: LAMPIRAN (Halaman 16) -->
+  <!-- ========================================================================= -->
+  <div class="page-container page-break">
+    <div style="text-align: center;">
+      <h2>LAMPIRAN</h2>
+    </div>
+
+    <h3>Lampiran 1: Struktur Skema Basis Data SQLite dan Endpoint REST API Flask</h3>
+    <p class="no-indent"><strong>1. Skema DDL Basis Data SQLite:</strong></p>
+    <pre style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px; border-radius: 5px; font-size: 8.5pt; overflow-x: auto;">
+CREATE TABLE books (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    sku TEXT UNIQUE NOT NULL,
+    title TEXT NOT NULL,
+    price REAL NOT NULL,
+    stock INTEGER NOT NULL DEFAULT 0,
+    abc_class TEXT DEFAULT 'C',
+    last_opname DATE
+);
+
+CREATE TABLE transactions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    invoice_no TEXT UNIQUE NOT NULL,
+    total_amount REAL NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status TEXT DEFAULT 'completed' -- 'completed' atau 'void'
+);
+
+CREATE TABLE transaction_items (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    transaction_id INTEGER REFERENCES transactions(id),
+    book_id INTEGER REFERENCES books(id),
+    qty INTEGER NOT NULL,
+    subtotal REAL NOT NULL
+);
+
+CREATE TABLE settings (
+    key TEXT PRIMARY KEY,
+    value TEXT NOT NULL
+);</pre>
+
+    <p class="no-indent" style="margin-top: 1rem;"><strong>2. Spesifikasi Endpoint REST API Flask:</strong></p>
+    <ul style="font-size: 9.5pt;">
+      <li><code>GET /api/books</code> : Mengambil katalog seluruh 600 SKU dan status kelas ABC.</li>
+      <li><code>POST /api/transactions</code> : Menyimpan transaksi kasir baru dan auto-deduct stok atomik.</li>
+      <li><code>POST /api/transactions/void</code> : Membatalkan nota dan auto-revert stok (validasi PIN Admin).</li>
+      <li><code>POST /api/abc/calculate</code> : Memicu kalkulasi ulang algoritma Dynamic ABC.</li>
+      <li><code>GET /api/opname/alerts</code> : Mengambil daftar SKU yang telah melampaui toleransi hari opname.</li>
+      <li><code>POST /api/auth/pin</code> : Validasi PIN Admin toko untuk otorisasi void Kelas A.</li>
+    </ul>
+
+    <h3 style="margin-top: 2rem;">Lampiran 2: Instrumen Observasi Partisipatif dan Pedoman Wawancara Staf Kasir</h3>
+    <ol style="font-size: 9.5pt; list-style-type: lower-alpha;">
+      <li>Pengecekan fisik (stock opname) eksisting dilakukan secara acak tanpa pembobotan nilai barang, mengakibatkan buku berharga mahal kerap terlambat terdeteksi saat selisih.</li>
+      <li>Pertanyaan Wawancara: <em>"Berapa rata-rata frekuensi terjadinya selisih stok (diskrepansi) antara catatan kasir dan fisik buku di rak setiap bulannya?"</em></li>
+      <li>Pertanyaan Wawancara: <em>"Bagaimana mekanisme pembatalan nota (void) yang berjalan saat ini jika kasir melakukan kesalahan input atau pembatalan transaksi?"</em></li>
+    </ol>
+    <div class="page-number">16</div>
+  </div>
+
+</body>
+</html>
